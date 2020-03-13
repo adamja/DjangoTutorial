@@ -1,0 +1,18 @@
+
+# pip installs
+
+$ pip install django
+
+
+Check django version
+$ python -m django --version
+
+Start a new project
+$ django-admin startproject django_project
+
+Run server
+$ python manage.py runserver
+
+Create a new app
+$ python manage.py startapp blog
+

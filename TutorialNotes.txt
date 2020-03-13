@@ -17,3 +17,19 @@ $ python manage.py runserver
 Create a new app
 $ python manage.py startapp blog
 
+Create a new admin user (need to create database for this to work)
+$ python manage.py createsuperuser
+  > adam
+  > adam_289@hotmail.com
+  > Testing321
+
+  Added users in admin panel:
+  > TestUser
+  > Testing321
+
+
+Make migrations - prepares django to update the database
+$ python manage.py makemigrations
+
+Apply migrations - updates the database
+$ python manage.py migrate

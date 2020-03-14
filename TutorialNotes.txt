@@ -3,6 +3,7 @@ Tutorial link: https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQC
 
 pip installs
 $ pip install django
+$ pip install django-crispy-forms
 
 
 Check django version

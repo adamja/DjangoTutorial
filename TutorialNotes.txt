@@ -85,3 +85,31 @@ datetime.datetime(2020, 3, 13, 14, 24, 48, 68499, tzinfo=<UTC>)
 >>> Post.objects.all()
 <QuerySet [<Post: Blog 1>, <Post: Blog 2>, <Post: Blog 3>]>
 >>> exit()
+
+### Video 8
+(venv) C:\Users\Adam\PycharmProjects\DjangoTutorial\django_project>python manage.py shell
+Python 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 22:20:52) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from django.contrib.auth.models import User
+>>> user = User.objects.filter(username='adam').first()
+>>> user
+<User: adam>
+>>> user.profile
+<Profile: adam Profile>
+>>> user.profile.image
+<ImageFieldFile: profile_images/Ninja_Bubbles.jpg>
+>>> user.profile.image.width
+128
+>>> user.profile.image.height
+128
+>>> user.profile.image.size
+18305
+>>> user.profile.image.url
+'profile_images/Ninja_Bubbles.jpg'
+>>> user2 = User.objects.filter(username='TestUser').first()
+>>> user2
+<User: TestUser>
+>>> user2.profile.image
+<ImageFieldFile: default.jpg>
+>>> exit()

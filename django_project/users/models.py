@@ -10,8 +10,8 @@ class Profile(models.Model):
     def __str__(self):
         return f'{self.user.username} Profile'
 
-    def save(self):  # override the save model to add functionality
-        super().save()  # run the parent save method first
+    def save(self, *args, **kwargs):  # override the save model to add functionality
+        super().save(*args, **kwargs)  # run the parent save method first
 
         img = Image.open(self.image.path)
 
